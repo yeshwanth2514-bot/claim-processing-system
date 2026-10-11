@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Processing System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Claim Processing System</h1>
+    <p>Submit and track your claims easily</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Submit a Claim</h2>
+      <form id="claimForm">
+        <label for="name">Full Name</label>
+        <input id="name" required placeholder="Enter your name">
+
+        <label for="claimType">Claim Type</label>
+        <select id="claimType" required>
+          <option value="">Select type</option>
+          <option>Medical</option>
+          <option>Travel</option>
+          <option>Insurance</option>
+          <option>Other</option>
+        </select>
+
+        <label for="amount">Claim Amount (₹)</label>
+        <input id="amount" type="number" min="1" required>
+
+        <label for="document">Upload Document</label>
+        <input id="document" type="file"
+          accept=".pdf,.jpg,.jpeg,.png" required>
+
+        <button type="submit">Submit Claim</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Claim Status</h2>
+      <div id="claims">
+        <p>No claims submitted yet.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
